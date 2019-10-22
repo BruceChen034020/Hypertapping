@@ -10,6 +10,7 @@ average = 0;
         average = score / 0.5;
         startTimer();
     });
+    createP('Mouse down, left arrow pressed, right arrow pressed, space bar pressed')
 }
 function draw(){
 
@@ -20,6 +21,10 @@ function keyPressed() {
     average = score / 0.5;
     startTimer();
   } else if (keyCode === RIGHT_ARROW) {
+    score = score + 1;
+    average = score / 0.5;
+    startTimer();
+  } else if (keyCode == 32){
     score = score + 1;
     average = score / 0.5;
     startTimer();
