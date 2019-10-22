@@ -30,6 +30,11 @@ function keyPressed() {
     startTimer();
   }
 }
+function mouseClicked(){
+  score = score + 1;
+  average = score / 0.5;
+  startTimer();
+}
     function startTimer() {
         if (stop === 0) {
             stop = stop + 1;
@@ -44,7 +49,7 @@ function keyPressed() {
                     stop = 0;
                     endscore = score;
                     score = 0;
-                    $("#results").html("You clicked " + endscore + " times, in 5 seconds.<br>Your average click speed was " + average + " clicks per second.<br>Start clicking again to retry and get a better score!");
+                    $("#results").html("You clicked " + endscore + " times, in 0.5 seconds.<br>Your average click speed was " + average + " clicks per second.<br>Start clicking again to retry and get a better score!");
                     $("#button").html("CLICK! (0.5 secs)");
                 }
             }, 50);
